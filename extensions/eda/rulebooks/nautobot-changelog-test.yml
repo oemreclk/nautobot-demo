@@ -10,7 +10,7 @@
         validate_certs: false
   rules:
     - name: Print every event
-      condition: event.meta is defined
+      condition: event.id is defined
       action:
         debug:
           msg:
