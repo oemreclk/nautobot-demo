@@ -13,6 +13,3 @@
       condition: event.id is defined
       action:
         debug:
-          msg:
-            - "=== Nautobot changelog event ==="
-            - "{{ event }}"
