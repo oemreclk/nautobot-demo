@@ -1,0 +1,15 @@
+---
+# Debug rulebook - prints ALL Nautobot changelog events unconditionally
+- name: Listen for Nautobot changelog events
+  hosts: all
+  sources:
+    - networktocode.nautobot.nautobot_changelog:
+        instance: "{{ NAUTOBOT_URL }}"
+        token: "{{ NAUTOBOT_TOKEN }}"
+        interval: 5
+        validate_certs: false
+  rules:
+    - name: Print every event
+      condition: event.id is defined
+      action:
+        debug:
