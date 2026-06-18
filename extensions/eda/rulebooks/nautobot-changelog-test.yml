@@ -7,6 +7,7 @@
         instance: "{{ NAUTOBOT_URL }}"
         token: "{{ NAUTOBOT_TOKEN }}"
         interval: 5
+        validate_certs: false
   rules:
     - name: Print every event
       condition: event.meta is defined
