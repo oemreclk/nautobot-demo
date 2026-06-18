@@ -18,10 +18,7 @@
         run_job_template:
           name: "Nautobot Job Template"
           organization: "Default"
-          job_args:
-            extra_vars:
-              eda_event: "{{ event }}"
-              eda_rule_name: "IP address created or updated directly"
+
 
     - name: Interface updated (IP assigned or removed)
       condition: >
@@ -33,7 +30,4 @@
         run_job_template:
           name: "Nautobot Job Template"
           organization: "Default"
-          job_args:
-            extra_vars:
-              eda_event: "{{ event }}"
-              eda_rule_name: "Interface updated (IP assigned or removed)"
+
