@@ -6,6 +6,7 @@
         instance: "{{ NAUTOBOT_URL }}"
         token: "{{ NAUTOBOT_TOKEN }}"
         interval: 5
+        validate_certs: false
 
   rules:
     - name: IP address created or updated directly
